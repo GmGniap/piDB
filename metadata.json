@@ -1,9 +1,12 @@
 {
     "title": "piDB",
-    "license": "Not-commerical used!",
+    "license": "Non-commercial",
     "about": "Personal Database",
     "source": "Credit to original owners",
     "databases": {
+        "bp_energy": {
+            "title": "BP Staticial Review of World Energy"
+        },
         "ember": {
             "title": "Ember Climate"
         },
