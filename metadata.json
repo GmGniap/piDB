@@ -1,0 +1,14 @@
+{
+    "title": "piDB",
+    "license": "Not-commerical used!",
+    "about": "Personal Database",
+    "source": "Credit to original owners",
+    "databases": {
+        "ember": {
+            "title": "Ember Climate"
+        },
+        "gem": {
+            "title": "Global Energy Monitor"
+        }
+    }
+}
