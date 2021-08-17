@@ -29,6 +29,7 @@ jobs:
           npm install -g heroku
           heroku plugins:install heroku-builds
           datasette publish heroku ./**/*.db \
-          -m metadata.json
+          -m metadata.json \
+          -n pidb
 
       
