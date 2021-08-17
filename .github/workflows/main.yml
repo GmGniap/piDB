@@ -30,6 +30,6 @@ jobs:
           heroku plugins:install heroku-builds
           datasette publish heroku ./**/*.db \
           -m metadata.json \
-          -n pidb
+          -n pidb-datasette
 
       
