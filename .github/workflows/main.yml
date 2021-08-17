@@ -1,14 +1,34 @@
-name: Deploy to Deta
-on: push
+name: Deploy to Heroku
+on: 
+  push:
+    branches:
+    - master
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2 #Be sure you check-out the repo first. Deta CLI needs access to the files
-      - uses: BogDAAAMN/deta-deploy-action@v1.0.1
+      - name: Check out this repo
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
         with:
-          deta-access-token: ${{ secrets.DETA_KEY }} #Deta access token https://docs.deta.sh/docs/cli/auth
-          deta-name: 'piDB' #Deta Micro name https://docs.deta.sh/docs/cli/commands/#deta-clone
-          deta-project: 'default' #Optional: Deta project name https://docs.deta.sh/docs/cli/commands/#deta-clone
-          deta-project-dir: '.' #Optional: directory to be deployed on Deta. Default is the root "." 
+          python-version: 3.8
+      - name: Set up Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - name: Install Python dependencies 
+        run: |
+          pip install -r requirements.txt
+      - name: Deploy Heroku
+        env:
+          HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
+        run: |-
+          export LATEST_DATASETTE=`curl -s "https://api.github.com/repos/simonw/datasette/commits/main" | jq -r .sha`
+          npm install -g heroku
+          heroku plugins:install heroku-builds
+          datasette publish heroku fivethirtyeight.db polls.db \
+          -m metadata.json
+
+      
