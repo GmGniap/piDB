@@ -1,0 +1,60 @@
+{
+    "title": "piDB",
+    "license": "Non-commercial",
+    "about": "Personal Database",
+    "source": "Credit to original owners",
+    "databases": {
+        "bp_energy": {
+            "title": "BP Staticial Review of World Energy",
+            "tables": {
+                "bp_stats_review": {
+                    "description_html": "<p>Year - 2021 , Source - https://www.bp.com/en/global/corporate/energy-economics/statistical-review-of-world-energy.html</p>",
+                    "title": "BP Staticial Review of World Energy: bp_stats_review"
+                }
+            }
+        },
+        "ember": {
+            "title": "Ember Climate",
+            "tables": {
+                "202108_monthly_database": {
+                    "description_html": "<p>This table data is getting from  - https://github.com/ember-climate/ember-data-api/tree/main/data</p>",
+                    "title": "Ember Climate: 202108_monthly_database"
+                },
+                "2021_annual_database": {
+                    "description_html": "<p>This table data is getting from  - https://github.com/ember-climate/ember-data-api/tree/main/data</p>",
+                    "title": "Ember Climate: 2021_annual_database"
+                }
+            }
+        },
+        "gem": {
+            "title": "Global Energy Monitor",
+            "tables": {
+                "Global_Coal_Mine_Tracker": {
+                    "description_html": "<p>This table data is getting from  - https://globalenergymonitor.org/projects/</p>",
+                    "title": "Global Energy Monitor: Global_Coal_Mine_Tracker"
+                },
+                "Global_Coal_Plant_Tracker": {
+                    "description_html": "<p>This table data is getting from  - https://globalenergymonitor.org/projects/</p>",
+                    "title": "Global Energy Monitor: Global_Coal_Plant_Tracker"
+                },
+                "Global_Coal_Public_Finance_Tracker": {
+                    "description_html": "<p>This table data is getting from  - https://globalenergymonitor.org/projects/</p>",
+                    "title": "Global Energy Monitor: Global_Coal_Public_Finance_Tracker"
+                },
+                "Global_Gas_Plant_Tracker": {
+                    "description_html": "<p>This table data is getting from  - https://globalenergymonitor.org/projects/</p>",
+                    "title": "Global Energy Monitor: Global_Gas_Plant_Tracker"
+                }
+            }
+        },
+        "sport": {
+            "title": "Toughest Sport",
+            "tables": {
+                "toughestsport": {
+                    "description_html": "<p>Source - \n1. https://www.forbes.com/sites/nickdesantis/2016/06/20/the-top-25-highest-paid-athletes-of-2016-visualized/\n2. http://top-rankings.info/article.php?id=11</p>",
+                    "title": "Toughest Sport: toughestsport"
+                }
+            }
+        }
+    }
+}
