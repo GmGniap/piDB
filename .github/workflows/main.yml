@@ -21,8 +21,6 @@ jobs:
       - name: Install Python dependencies 
         run: |
           pip install -r requirements.txt
-      - name: Build metadata 
-        run: python update_metadata.py
       - name: Deploy Heroku
         env:
           HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
